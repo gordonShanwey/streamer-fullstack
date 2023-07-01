@@ -24,7 +24,7 @@ export const createStreamer = async (streamer:IStreamer) => {
         throw {status:500,message:e.message}
     }
 }
-const updateStreamer = async (streamer:IStreamer) => {
+export const updateStreamer = async (streamer:IStreamer) => {
     try {
         return await StreamerModel.findByIdAndUpdate(streamer.id,streamer)
     } catch (e:any) {

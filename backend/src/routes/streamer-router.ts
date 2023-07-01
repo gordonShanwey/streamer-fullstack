@@ -1,6 +1,6 @@
 import express, {Request, Response} from "express";
 import {IStreamer} from "../models/streamer-model";
-import {createStreamer, getStreamerById, getStreamers} from "../controllers/streamers-controller";
+import {createStreamer, getStreamerById, getStreamers, updateStreamer} from "../controllers/streamers-controller";
 
 const router = express.Router()
 
@@ -29,6 +29,17 @@ router.post('/streamers', async (req:Request, res:Response) => {
     try {
         const payload:IStreamer = req.body
         const streamer = await createStreamer(payload);
+        console.log(streamer)
+        res.status(200).send(streamer)
+    } catch (e:any) {
+        console.log(e.message)
+        res.status(500).send(e.message)
+    }
+})
+router.put('/streamers/:id/vote', async (req:Request, res:Response) => {
+    try {
+        const payload = req.body
+        const streamer = await updateStreamer(payload);
         console.log(streamer)
         res.status(200).send(streamer)
     } catch (e:any) {
