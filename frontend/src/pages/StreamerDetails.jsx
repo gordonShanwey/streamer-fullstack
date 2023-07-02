@@ -37,12 +37,6 @@ function StreamerDetails ()  {
                                     <div className="flex flex-row justify-between py-8 mx-16">
                                         <p className='ali'>Desc: {data.description}</p>
                                     </div> <div className="flex flex-row justify-between py-8 mx-16">
-                                    {/*<button onClick={()=> {*/}
-
-                                    {/*    navigate('/')*/}
-                                    {/*}} className='bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2 px-8 rounded'>*/}
-                                    {/*    Back*/}
-                                    {/*</button>*/}
                                     <Link to='/' className='bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2 px-8 rounded'>
                                         Back
                                     </Link>

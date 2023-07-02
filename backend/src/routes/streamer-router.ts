@@ -1,6 +1,6 @@
 import express, {Request, Response} from "express";
 import {IStreamer} from "../models/streamer-model";
-import {createStreamer, getStreamerById, getStreamers, updateStreamer} from "../controllers/streamers-controller";
+import {createStreamer, getStreamerById, getStreamers, updateStreamer} from "../db/schemas/streamer";
 
 const router = express.Router()
 
